@@ -1,134 +1,169 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Gold Rush 2025 - Domine o Marketing Digital</title>
+    <title>Marketing Mastery 2025 - Domine o Marketing Digital</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1a202c',
-                        secondary: '#d69e2e',
-                        accent: '#2d3748'
+                        primary: '#000000',
+                        secondary: '#FFD700',
+                        metallic: '#6B7280',
+                        dark: '#0A0A0A',
+                        light: '#F3F4F6'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
+                        'slide-in': 'slideIn 0.5s ease-out forwards',
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-primary dark:text-white font-sans transition-colors duration-300">
-    <!-- Theme Toggle -->
-    <div class="fixed top-4 right-4 z-50">
-        <button id="themeToggle" class="bg-white dark:bg-accent p-3 rounded-full shadow-lg hover:shadow-xl transition-all">
-            <i data-feather="moon" class="hidden dark:block w-5 h-5"></i>
-            <i data-feather="sun" class="dark:hidden w-5 h-5"></i>
-        </button>
-    </div>
-
+<body class="bg-dark text-white font-sans antialiased">
     <!-- Navigation -->
-    <custom-navbar></custom-navbar>
+    <main-navbar></main-navbar>
 
     <!-- Hero Section -->
-    <section class="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 dark:from-primary dark:via-accent/20 dark:to-primary pt-20">
-        <div class="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center">
-            <div class="lg:w-1/2 mb-10 lg:mb-0">
-            <div class="inline-block bg-gradient-to-r from-secondary to-yellow-400 text-primary px-4 py-2 rounded-full text-sm font-bold mb-6">
-                🚀 OFERTA POR TEMPO LIMITADO
+    <section class="min-h-screen bg-gradient-to-br from-dark via-metallic/20 to-dark pt-24 overflow-hidden">
+        <div class="container mx-auto px-4 py-12 flex flex-col lg:flex-row items-center gap-12 relative">
+            <div class="absolute inset-0 bg-gradient-radial from-secondary/5 via-transparent to-transparent pointer-events-none"></div>
+            <div class="lg:w-1/2 z-10 opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">
+                <div class="mb-6 inline-flex items-center gap-2 bg-secondary/10 px-4 py-2 rounded-full border border-secondary/30">
+                    <i data-feather="trending-up" class="w-4 h-4 text-secondary"></i>
+                    <span class="text-secondary text-sm font-semibold">Mais de 2.000 alunos transformados</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-white via-white to-secondary bg-clip-text text-transparent">
+                    Domine o Marketing Digital <span class="text-secondary">Sem Complicações</span> — Aprenda o que realmente funciona em 2025
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Descubra o método simples e direto para criar estratégias que vendem, mesmo que você esteja começando do zero.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#compra" class="bg-secondary text-dark px-8 py-4 rounded-xl font-bold text-lg hover:bg-white transition-all transform hover:scale-105 inline-flex items-center justify-center gap-3 group">
+                        <span>Quero Começar Agora</span>
+                        <i data-feather="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#beneficios" class="border border-metallic px-8 py-4 rounded-xl hover:border-secondary transition-all hover:bg-secondary/10">
+                        Saiba Mais
+                    </a>
+                </div>
+                <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+                    <div>
+                        <div class="text-2xl font-bold text-secondary">200+</div>
+                        <div class="text-sm text-gray-400">Páginas</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-secondary">7</div>
+                        <div class="text-sm text-gray-400">Dias de Garantia</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-secondary">R$ 197</div>
+                        <div class="text-sm text-gray-400">Bônus</div>
+                    </div>
+                </div>
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Domine o Marketing Digital <span class="text-secondary">Sem Complicações</span> — Aprenda o que realmente funciona em 2025
-            </h1>
-            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                Descubra o método simples e direto para criar estratégias que vendem, mesmo que você esteja começando do zero.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#compra" class="bg-secondary text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-500 transition-all transform hover:scale-105 inline-block text-center">
-                    Quero Começar Agora
-                </a>
-                <a href="#beneficios" class="border-2 border-secondary text-secondary px-8 py-4 rounded-lg font-bold text-lg hover:bg-secondary hover:text-primary transition-all inline-block text-center">
-                    Saiba Mais
-                </a>
-            </div>
-            </div>
-            <div class="lg:w-1/2 flex justify-center">
-                <div class="relative">
-                    <img src="http://static.photos/technology/640x360/1" alt="Marketing Digital" class="rounded-2xl shadow-2xl max-w-md">
-                    <div class="absolute -bottom-4 -right-4 bg-secondary text-primary px-6 py-3 rounded-lg font-bold shadow-xl">
-                    +2.000 Alunos
+            <div class="lg:w-1/2 flex justify-center z-10">
+                <div class="relative group">
+                    <img src="http://static.photos/technology/640x360/1" alt="Marketing Digital" class="rounded-2xl shadow-2xl max-w-md w-full transform group-hover:scale-105 transition-all duration-500 animate-float">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-secondary/20 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+                    <div class="absolute -top-4 -right-4 bg-secondary text-dark px-4 py-2 rounded-full font-bold animate-pulse-glow">
+                        📚 NOVO
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Benefits Section -->
-    <section id="beneficios" class="py-20 bg-gray-100 dark:bg-accent/30">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-4">O Que Você Vai Aprender</h2>
-            <p class="text-xl text-center text-gray-600 dark:text-gray-300 mb-16">
-                Estratégias práticas que funcionam no mercado atual
-            </p>
+    <section id="beneficios" class="py-20 bg-metallic/5 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-secondary bg-clip-text text-transparent">O Que Você Vai Aprender</h2>
+                <p class="text-xl text-gray-300">Conhecimento prático que gera resultados reais</p>
+            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white dark:bg-primary/50 p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="book" class="w-12 h-12"></i>
+                <div class="bg-dark/50 p-8 rounded-2xl border border-metallic/30 hover:border-secondary transition-all transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-secondary/10 group">
+                    <div class="bg-secondary/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-all group-hover:scale-110">
+                        <i data-feather="book" class="w-8 h-8 text-secondary"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Bases do Marketing Moderno</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Fundamentos essenciais para construir uma estratégia sólida</p>
+                    <h3 class="text-xl font-bold mb-3 text-white group-hover:text-secondary transition-colors">Bases do Marketing Moderno</h3>
+                    <p class="text-gray-300">Fundamentos essenciais para construir uma estratégia sólida que resiste ao tempo</p>
                 </div>
-                <div class="bg-white dark:bg-primary/50 p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="zap" class="w-12 h-12"></i>
+                <div class="bg-dark/50 p-8 rounded-2xl border border-metallic/30 hover:border-secondary transition-all transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-secondary/10 group">
+                    <div class="bg-secondary/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-all group-hover:scale-110">
+                        <i data-feather="zap" class="w-8 h-8 text-secondary"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Automação de Vendas</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Configure sistemas que trabalham 24/7 para você</p>
+                    <h3 class="text-xl font-bold mb-3 text-white group-hover:text-secondary transition-colors">Automação de Vendas</h3>
+                    <p class="text-gray-300">Configure sistemas inteligentes que trabalham 24/7 enquanto você foca no que ama</p>
                 </div>
-                <div class="bg-white dark:bg-primary/50 p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="cpu" class="w-12 h-12"></i>
+                <div class="bg-dark/50 p-8 rounded-2xl border border-metallic/30 hover:border-secondary transition-all transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-secondary/10 group">
+                    <div class="bg-secondary/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-all group-hover:scale-110">
+                        <i data-feather="cpu" class="w-8 h-8 text-secondary"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">IA e Ferramentas Práticas</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Utilize inteligência artificial para potencializar resultados</p>
+                    <h3 class="text-xl font-bold mb-3 text-white group-hover:text-secondary transition-colors">IA e Ferramentas Práticas</h3>
+                    <p class="text-gray-300">Utilize inteligência artificial para potencializar resultados em escala</p>
                 </div>
-                <div class="bg-white dark:bg-primary/50 p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="trending-up" class="w-12 h-12"></i>
+                <div class="bg-dark/50 p-8 rounded-2xl border border-metallic/30 hover:border-secondary transition-all transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-secondary/10 group">
+                    <div class="bg-secondary/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-all group-hover:scale-110">
+                        <i data-feather="trending-up" class="w-8 h-8 text-secondary"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Modelos Prontos</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Templates que aceleram sua implementação</p>
+                    <h3 class="text-xl font-bold mb-3 text-white group-hover:text-secondary transition-colors">Modelos Prontos</h3>
+                    <p class="text-gray-300">Templates e frameworks que aceleram sua implementação imediatamente</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Product Section -->
-    <section id="produto" class="py-20">
+    <section id="produto" class="py-20 bg-gradient-to-r from-dark to-metallic/10">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2">
-                    <div class="relative">
-                        <img src="http://static.photos/black/640x360/2" alt="Capa do Ebook Marketing Simplificado" class="rounded-2xl shadow-2xl max-w-md mx-auto">
-                        <div class="absolute -top-4 -left-4 bg-secondary text-primary px-4 py-2 rounded-lg font-bold">
-                            NOVO
+                    <div class="relative group">
+                        <img src="http://static.photos/black/640x360/2" alt="Capa do Ebook Marketing Simplificado" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto transform group-hover:scale-105 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute bottom-4 left-4 bg-dark/80 px-4 py-2 rounded-lg backdrop-blur opacity-0 group-hover:opacity-100 transition-all">
+                            <p class="text-sm text-secondary font-semibold">Clique para ampliar</p>
                         </div>
                     </div>
                 </div>
                 <div class="lg:w-1/2">
-                    <h2 class="text-4xl font-bold mb-6">Marketing Simplificado</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                    <h2 class="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-secondary bg-clip-text text-transparent">Marketing Simplificado</h2>
+                    <p class="text-xl text-gray-300 mb-6 leading-relaxed">
                         Este guia foi criado para empreendedores que não querem mais perder tempo com teorias. Aqui você aprende o que realmente importa: como gerar atenção, atrair clientes e vender todos os dias de forma inteligente.
                     </p>
-                    <div class="bg-gray-100 dark:bg-accent/20 p-6 rounded-xl mb-6 border border-gray-200 dark:border-gray-600">
-                        <h3 class="text-2xl font-bold text-secondary mb-4">Sobre o Autor</h3>
-                        <p class="text-gray-600 dark:text-gray-300">
-                            Criado por especialistas que vivem o marketing digital na prática, unindo experiência de mercado e inovação em automação.
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <i data-feather="check-circle" class="w-5 h-5 text-secondary flex-shrink-0"></i>
+                            <span>Conteúdo 100% prático e aplicável</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <i data-feather="check-circle" class="w-5 h-5 text-secondary flex-shrink-0"></i>
+                            <span>Atualizado para as tendências de 2025</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <i data-feather="check-circle" class="w-5 h-5 text-secondary flex-shrink-0"></i>
+                            <span>Suporte exclusivo para alunos</span>
+                        </li>
+                    </ul>
+                    <div class="bg-secondary/10 p-6 rounded-2xl border border-secondary/30 backdrop-blur">
+                        <h3 class="text-2xl font-bold text-secondary mb-4 flex items-center gap-3">
+                            <i data-feather="user" class="w-6 h-6"></i>
+                            Sobre o Autor
+                        </h3>
+                        <p class="text-gray-300">
+                            Criado por especialistas que vivem o marketing digital na prática, unindo experiência de mercado e inovação em automação. Mais de 10 anos de resultados comprovados.
                         </p>
                     </div>
                 </div>
@@ -137,120 +172,193 @@
     </section>
 
     <!-- Workshop Section -->
-    <section class="py-20 bg-secondary/10">
-        <div class="container mx-auto px-4 text-center">
-            <div class="bg-white dark:bg-primary p-8 rounded-2xl border border-secondary/30 max-w-2xl mx-auto shadow-2xl">
-                <h2 class="text-3xl font-bold mb-4 text-secondary">🎁 Bônus Exclusivo</h2>
-            <h3 class="text-4xl font-bold mb-6">Workshop Online Grátis</h3>
-            <p class="text-xl text-gray-600 dark:text-gray-300 mb-6">
-                Ao adquirir o ebook, você ganha acesso exclusivo a um workshop online onde revelamos estratégias reais usadas por profissionais para vender todos os dias.
-            </p>
-            <div class="text-2xl font-bold text-secondary mb-4">
-                Valor: R$ 197,00 → <span class="line-through text-gray-400">GRÁTIS</span>
-            </div>
+    <section class="py-20 bg-secondary/10 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-radial from-secondary/10 via-transparent to-transparent"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="bg-dark p-8 rounded-2xl border border-secondary/30 max-w-2xl mx-auto transform hover:scale-105 transition-all">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-secondary/20 px-4 py-2 rounded-full border border-secondary/40 inline-flex items-center gap-2">
+                        <i data-feather="gift" class="w-5 h-5 text-secondary"></i>
+                        <span class="text-secondary font-bold">BÔNUS EXCLUSIVO</span>
+                    </div>
+                </div>
+                <h2 class="text-3xl font-bold mb-2 text-secondary">Workshop Online Grátis</h2>
+                <h3 class="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-secondary bg-clip-text text-transparent">Estratégias Reais de Profissionais</h3>
+                <p class="text-xl text-gray-300 mb-8 max-w-xl mx-auto">
+                    Ao adquirir o ebook, você ganha acesso exclusivo a um workshop online onde revelamos estratégias reais usadas por profissionais para vender todos os dias.
+                </p>
+                <div class="bg-secondary/10 p-6 rounded-xl border border-secondary/20 mb-8">
+                    <div class="text-2xl font-bold text-secondary mb-2">Valor: R$ 197,00</div>
+                    <div class="text-4xl font-bold text-white">GRÁTIS</div>
+                    <div class="text-sm text-gray-400 mt-2">Para os primeiros 100 compradores</div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div class="bg-dark/50 p-4 rounded-xl border border-metallic/30">
+                        <div class="text-secondary font-bold">2h</div>
+                        <div class="text-sm text-gray-400">de Conteúdo</div>
+                    </div>
+                    <div class="bg-dark/50 p-4 rounded-xl border border-metallic/30">
+                        <div class="text-secondary font-bold">Live</div>
+                        <div class="text-sm text-gray-400">Interativo</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="depoimentos" class="py-20 bg-gray-100 dark:bg-accent/30">
-            <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-4">O Que Nossos Alunos Dizem</h2>
-            <p class="text-xl text-center text-gray-600 dark:text-gray-300 mb-12">
-                Mais de 2.000 alunos já aplicaram o método e estão conquistando resultados incríveis!
-            </p>
+    <section id="depoimentos" class="py-20 bg-metallic/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-secondary bg-clip-text text-transparent">O Que Nossos Alunos Dizem</h2>
+                <div class="flex justify-center items-center gap-4 mt-4">
+                    <div class="flex text-secondary">
+                        <i data-feather="star" class="w-6 h-6 fill-current"></i>
+                        <i data-feather="star" class="w-6 h-6 fill-current"></i>
+                        <i data-feather="star" class="w-6 h-6 fill-current"></i>
+                        <i data-feather="star" class="w-6 h-6 fill-current"></i>
+                        <i data-feather="star" class="w-6 h-6 fill-current"></i>
+                    </div>
+                    <p class="text-xl text-gray-300">4.9/5 de mais de 2.000 avaliações</p>
+                </div>
+            </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white dark:bg-primary/50 p-6 rounded-xl border border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-all">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 italic">
-                        "Finalmente entendi como aplicar marketing digital no meu negócio. Os resultados apareceram em menos de 30 dias!"
-                    </p>
-                    <p class="font-bold text-secondary">- Maria S., Empreendedora</p>
-                </div>
-                <div class="bg-white dark:bg-primary/50 p-6 rounded-xl border border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-all">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 italic">
-                        "As estratégias de automação mudaram completamente minha forma de trabalhar. Agora tenho mais tempo para focar no que importa."
-                    </p>
-                    <p class="font-bold text-secondary">- João P., Freelancer</p>
-                </div>
-                <div class="bg-white dark:bg-primary/50 p-6 rounded-xl border border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-all">
-                    <div class="text-secondary mb-4">
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                        <i data-feather="star" class="w-6 h-6 inline"></i>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 italic">
-                        "O workshop bônus foi surpreendente! Estratégias que nunca imaginei que existiam."
-                    </p>
-                    <p class="font-bold text-secondary">- Ana L., Iniciante</p>
-                </div>
+                <testimonial-card 
+                    name="Maria S." 
+                    title="Empreendedora"
+                    content="Finalmente entendi como aplicar marketing digital no meu negócio. Os resultados apareceram em menos de 30 dias!"
+                    stars="5">
+                </testimonial-card>
+                <testimonial-card 
+                    name="João P." 
+                    title="Freelancer"
+                    content="As estratégias de automação mudaram completamente minha forma de trabalhar. Agora tenho mais tempo para focar no que importa."
+                    stars="5">
+                </testimonial-card>
+                <testimonial-card 
+                    name="Ana L." 
+                    title="Iniciante"
+                    content="O workshop bônus foi surpreendente! Estratégias que nunca imaginei que existissem. Mudou meu jeito de vender."
+                    stars="5">
+                </testimonial-card>
+            </div>
+            <div class="text-center mt-12">
+                <button class="bg-secondary/10 px-6 py-3 rounded-xl border border-secondary/30 hover:bg-secondary/20 transition-all">
+                    <i data-feather="plus" class="w-4 h-4 inline mr-2"></i>
+                    Ver mais depoimentos
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Guarantee Section -->
-    <section id="garantia" class="py-20">
+    <section id="garantia" class="py-20 bg-gradient-to-r from-dark to-metallic/10">
         <div class="container mx-auto px-4 text-center">
-            <div class="bg-gray-100 dark:bg-accent/20 p-8 rounded-2xl border border-secondary/30 max-w-3xl mx-auto shadow-2xl">
+            <div class="bg-dark/50 p-8 md:p-12 rounded-2xl border border-secondary/30 max-w-3xl mx-auto transform hover:scale-105 transition-all backdrop-blur">
                 <div class="text-secondary mb-6">
-                    <i data-feather="shield" class="w-16 h-16 mx-auto"></i>
+                    <i data-feather="shield" class="w-20 h-20 mx-auto stroke-1"></i>
                 </div>
-                <h2 class="text-4xl font-bold mb-6">Garantia Incondicional de 7 Dias</h2>
-                <p class="text-xl text-gray-600 dark:text-gray-300 mb-6">
-                    Se você não estiver satisfeito com o conteúdo, devolvemos 100% do seu investimento. Sem burocracia.
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-secondary bg-clip-text text-transparent">Garantia Incondicional de 7 Dias</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-xl mx-auto">
+                    Se você não estiver satisfeito com o conteúdo, devolvemos 100% do seu investimento. Sem burocracia, sem perguntas.
                 </p>
-                <p class="text-lg text-gray-500 dark:text-gray-400">
-                    Sem perguntas. Sem complicação. Sua satisfação é nossa prioridade.
-                </p>
+                <div class="grid md:grid-cols-3 gap-6 mt-8">
+                    <div class="text-center">
+                        <i data-feather="check-circle" class="w-8 h-8 text-secondary mx-auto mb-2"></i>
+                        <p class="text-sm text-gray-400">Devolução Rápida</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-feather="thumbs-up" class="w-8 h-8 text-secondary mx-auto mb-2"></i>
+                        <p class="text-sm text-gray-400">Sem Complicação</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-feather="heart" class="w-8 h-8 text-secondary mx-auto mb-2"></i>
+                        <p class="text-sm text-gray-400">Sua Satisfação Primeiro</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Final CTA Section -->
-    <section id="compra" class="py-20 bg-gray-50 dark:bg-primary border-t border-gray-200 dark:border-gray-600">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                Chegou a hora de simplificar o seu marketing e dominar o digital.
-        </h2>
-        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-                Junte-se aos mais de 2.000 empreendedores que já transformaram seus negócios com nosso método.
-            </p>
-            <div class="bg-secondary text-primary p-8 rounded-2xl max-w-2xl mx-auto mb-8 shadow-2xl">
-                <h3 class="text-3xl font-bold mb-4">Oferta Especial por Tempo Limitado</h3>
-                <div class="text-2xl mb-6">
-                    <span class="line-through text-gray-400">R$ 297,00</span>
-                    <span class="text-4xl font-bold ml-4">R$ 97,00</span>
-                </div>
-                <a href="#" class="bg-primary text-white px-12 py-4 rounded-lg font-bold text-lg hover:bg-accent transition-all transform hover:scale-105 inline-block shadow-lg">
-                    Quero Garantir Meu Acesso Agora
-                </a>
-                <p class="text-sm text-gray-600 mt-4">
-                    Pagamento seguro • Acesso imediato • Suporte dedicado
+    <section id="compra" class="py-20 bg-primary relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-radial from-secondary/10 via-transparent to-transparent"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="mb-12 opacity-0 animate-fade-in-up">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-white to-secondary bg-clip-text text-transparent">
+                    Chegou a hora de simplificar o seu marketing e dominar o digital.
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Junte-se aos mais de 2.000 empreendedores que já transformaram seus negócios com nosso método comprovado.
                 </p>
+            </div>
+            <div class="bg-gradient-to-br from-secondary to-white p-8 md:p-12 rounded-3xl max-w-2xl mx-auto transform hover:scale-105 transition-all shadow-2xl shadow-secondary/20 opacity-0 animate-fade-in-up" style="animation-delay: 0.3s;">
+                <div class="bg-dark rounded-2xl p-8">
+                    <div class="inline-flex items-center gap-2 bg-secondary/10 px-4 py-2 rounded-full mb-4">
+                        <i data-feather="clock" class="w-4 h-4 text-secondary"></i>
+                        <span class="text-secondary text-sm font-semibold">OFERTA POR TEMPO LIMITADO</span>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-6 text-white">Oferta Especial de Lançamento</h3>
+                    <div class="bg-secondary/10 p-6 rounded-xl border border-secondary/30 mb-8">
+                        <div class="text-xl mb-2">
+                            <span class="line-through text-gray-500">R$ 297,00</span>
+                        </div>
+                        <div class="text-5xl font-bold text-secondary mb-2">R$ 97,00</div>
+                        <div class="text-sm text-gray-400">ou 12x de R$ 9,90 sem juros</div>
+                    </div>
+                    <a href="#" class="bg-secondary text-dark px-12 py-4 rounded-xl font-bold text-xl hover:bg-white transition-all transform hover:scale-105 inline-flex items-center justify-center gap-3 group relative overflow-hidden">
+                        <span class="relative z-10">Quero Garantir Meu Acesso Agora</span>
+                        <i data-feather="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform relative z-10"></i>
+                        <div class="absolute inset-0 bg-white/0 group-hover:bg-white/20 transition-all"></div>
+                    </a>
+                    <div class="mt-6 space-y-2">
+                        <p class="text-sm text-gray-400 flex items-center justify-center gap-2">
+                            <i data-feather="lock" class="w-3 h-3"></i>
+                            Pagamento 100% seguro
+                        </p>
+                        <p class="text-sm text-gray-400 flex items-center justify-center gap-2">
+                            <i data-feather="download" class="w-3 h-3"></i>
+                            Acesso imediato após a compra
+                        </p>
+                        <p class="text-sm text-gray-400 flex items-center justify-center gap-2">
+                            <i data-feather="headphones" class="w-3 h-3"></i>
+                            Suporte dedicado via WhatsApp
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto opacity-0 animate-fade-in-up" style="animation-delay: 0.5s;">
+                <div class="text-center group">
+                    <i data-feather="user-check" class="w-10 h-10 text-secondary mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-lg font-bold text-secondary">2.000+</div>
+                    <div class="text-sm text-gray-400">Alunos</div>
+                </div>
+                <div class="text-center group">
+                    <i data-feather="award" class="w-10 h-10 text-secondary mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-lg font-bold text-secondary">10+</div>
+                    <div class="text-sm text-gray-400">Anos de Experiência</div>
+                </div>
+                <div class="text-center group">
+                    <i data-feather="target" class="w-10 h-10 text-secondary mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-lg font-bold text-secondary">99%</div>
+                    <div class="text-sm text-gray-400">Taxa de Satisfação</div>
+                </div>
+                <div class="text-center group">
+                    <i data-feather="calendar" class="w-10 h-10 text-secondary mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-lg font-bold text-secondary">7</div>
+                    <div class="text-sm text-gray-400">Dias de Garantia</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <custom-footer></custom-footer>
+    <main-footer></main-footer>
 
+    <!-- Component Scripts -->
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
+    <script src="components/testimonial-card.js"></script>
     <script src="script.js"></script>
     <script>
         feather.replace();

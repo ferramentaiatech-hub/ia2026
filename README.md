@@ -1,7 +1,7 @@
 ---
-title: Marketing Gold Rush 2025 💰
-colorFrom: purple
-colorTo: purple
+title: Midas Marketing Mastery 🏆
+colorFrom: green
+colorTo: yellow
 emoji: 🐳
 sdk: static
 pinned: false
